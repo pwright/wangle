@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>cluster - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="http://localhost:6060/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="http://localhost:6060/lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.14";</script>
+<script src="http://localhost:6060/lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package cluster
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/skupperproject/skupper/test/cluster"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#ClusterContext">type ClusterContext</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuildClusterContext">func BuildClusterContext(t *testing.T, namespace string, configFile string) *ClusterContext</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ClusterContext.CreateNamespace">func (cc *ClusterContext) CreateNamespace()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ClusterContext.DeleteNamespace">func (cc *ClusterContext) DeleteNamespace()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ClusterContext.GetService">func (cc *ClusterContext) GetService(name string, timeout_S time.Duration) *apiv1.Service</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ClusterContext.KubectlExec">func (cc *ClusterContext) KubectlExec(command string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ClusterContext.KubectlExecAsync">func (cc *ClusterContext) KubectlExecAsync(command string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ClusterContext.SkupperExec">func (cc *ClusterContext) SkupperExec(command string)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ClusterTestRunnerBase">type ClusterTestRunnerBase</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ClusterTestRunnerBase.Build">func (r *ClusterTestRunnerBase) Build(t *testing.T, public1ConficFile, public2ConficFile, private1ConfigFile, private2ConfigFile string)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ClusterTestRunnerInterface">type ClusterTestRunnerInterface</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/test/cluster/cluster_test_runner.go">cluster_test_runner.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+		
+			
+			
+			<h2 id="ClusterContext">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/test/cluster/cluster_test_runner.go?s=1052:1204#L29">ClusterContext</a>
+				<a class="permalink" href="index.html#ClusterContext">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ClusterContext struct {
+<span id="ClusterContext.Namespace"></span>    Namespace         <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="ClusterContext.ClusterConfigFile"></span>    ClusterConfigFile <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="ClusterContext.VanClient"></span>    VanClient         *<a href="../../client/index.html">vanClient</a>.<a href="../../client/index.html#VanClient">VanClient</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="BuildClusterContext">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/test/cluster/cluster_test_runner.go?s=1206:1297#L36">BuildClusterContext</a>
+					<a class="permalink" href="index.html#BuildClusterContext">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func BuildClusterContext(t *<a href="http://localhost:6060/pkg/testing/">testing</a>.<a href="http://localhost:6060/pkg/testing/#T">T</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, configFile <a href="http://localhost:6060/pkg/builtin/#string">string</a>) *<a href="index.html#ClusterContext">ClusterContext</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="ClusterContext.CreateNamespace">func (*ClusterContext) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/test/cluster/cluster_test_runner.go?s=2403:2446#L84">CreateNamespace</a>
+					<a class="permalink" href="index.html#ClusterContext.CreateNamespace">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cc *<a href="index.html#ClusterContext">ClusterContext</a>) CreateNamespace()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ClusterContext.DeleteNamespace">func (*ClusterContext) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/test/cluster/cluster_test_runner.go?s=2628:2671#L90">DeleteNamespace</a>
+					<a class="permalink" href="index.html#ClusterContext.DeleteNamespace">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cc *<a href="index.html#ClusterContext">ClusterContext</a>) DeleteNamespace()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ClusterContext.GetService">func (*ClusterContext) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/test/cluster/cluster_test_runner.go?s=2822:2911#L97">GetService</a>
+					<a class="permalink" href="index.html#ClusterContext.GetService">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cc *<a href="index.html#ClusterContext">ClusterContext</a>) GetService(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, timeout_S <a href="http://localhost:6060/pkg/time/">time</a>.<a href="http://localhost:6060/pkg/time/#Duration">Duration</a>) *<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">apiv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Service">Service</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ClusterContext.KubectlExec">func (*ClusterContext) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/test/cluster/cluster_test_runner.go?s=2213:2266#L76">KubectlExec</a>
+					<a class="permalink" href="index.html#ClusterContext.KubectlExec">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cc *<a href="index.html#ClusterContext">ClusterContext</a>) KubectlExec(command <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ClusterContext.KubectlExecAsync">func (*ClusterContext) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/test/cluster/cluster_test_runner.go?s=2305:2363#L80">KubectlExecAsync</a>
+					<a class="permalink" href="index.html#ClusterContext.KubectlExecAsync">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cc *<a href="index.html#ClusterContext">ClusterContext</a>) KubectlExecAsync(command <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ClusterContext.SkupperExec">func (*ClusterContext) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/test/cluster/cluster_test_runner.go?s=2002:2055#L68">SkupperExec</a>
+					<a class="permalink" href="index.html#ClusterContext.SkupperExec">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cc *<a href="index.html#ClusterContext">ClusterContext</a>) SkupperExec(command <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ClusterTestRunnerBase">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/test/cluster/cluster_test_runner.go?s=431:613#L13">ClusterTestRunnerBase</a>
+				<a class="permalink" href="index.html#ClusterTestRunnerBase">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ClusterTestRunnerBase struct {
+<span id="ClusterTestRunnerBase.Pub1Cluster"></span>    Pub1Cluster  *<a href="index.html#ClusterContext">ClusterContext</a>
+<span id="ClusterTestRunnerBase.Pub2Cluster"></span>    Pub2Cluster  *<a href="index.html#ClusterContext">ClusterContext</a>
+<span id="ClusterTestRunnerBase.Priv1Cluster"></span>    Priv1Cluster *<a href="index.html#ClusterContext">ClusterContext</a>
+<span id="ClusterTestRunnerBase.Priv2Cluster"></span>    Priv2Cluster *<a href="index.html#ClusterContext">ClusterContext</a>
+<span id="ClusterTestRunnerBase.T"></span>    T            *<a href="http://localhost:6060/pkg/testing/">testing</a>.<a href="http://localhost:6060/pkg/testing/#T">T</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ClusterTestRunnerBase.Build">func (*ClusterTestRunnerBase) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/test/cluster/cluster_test_runner.go?s=615:751#L21">Build</a>
+					<a class="permalink" href="index.html#ClusterTestRunnerBase.Build">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (r *<a href="index.html#ClusterTestRunnerBase">ClusterTestRunnerBase</a>) Build(t *<a href="http://localhost:6060/pkg/testing/">testing</a>.<a href="http://localhost:6060/pkg/testing/#T">T</a>, public1ConficFile, public2ConficFile, private1ConfigFile, private2ConfigFile <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ClusterTestRunnerInterface">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/test/cluster/cluster_test_runner.go?s=271:429#L8">ClusterTestRunnerInterface</a>
+				<a class="permalink" href="index.html#ClusterTestRunnerInterface">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ClusterTestRunnerInterface interface {
+    Build(t *<a href="http://localhost:6060/pkg/testing/">testing</a>.<a href="http://localhost:6060/pkg/testing/#T">T</a>, public1ConficFile, public2ConficFile, private1ConfigFile, private2ConfigFile <a href="http://localhost:6060/pkg/builtin/#string">string</a>)
+    Run()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.14.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="http://localhost:6060/doc/tos.html">Terms of Service</a> |
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

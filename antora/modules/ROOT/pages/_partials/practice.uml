@@ -1,0 +1,13 @@
+@startmindmap
+skinparam monochrome true 
+* Router
+** http
+** tcp
+** gRPC
+
+left
+
+** CLI, API 
+*** expose
+*** bind
+@endmindmap

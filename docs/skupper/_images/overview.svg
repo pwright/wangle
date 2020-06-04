@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="179px" preserveAspectRatio="none" style="width:443px;height:179px;" version="1.1" viewBox="0 0 443 179" width="443px" zoomAndPan="magnify"><defs><filter height="300%" id="f1vf3zmmh5r39q" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#F8F8F8" filter="url(#f1vf3zmmh5r39q)" height="36.2969" rx="12.5" ry="12.5" style="stroke: #383838; stroke-width: 1.5;" width="69" x="255" y="76.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="49" x="265" y="99.292">Router</text><rect fill="#F8F8F8" filter="url(#f1vf3zmmh5r39q)" height="36.2969" rx="12.5" ry="12.5" style="stroke: #383838; stroke-width: 1.5;" width="53" x="374" y="20"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="33" x="384" y="42.9951">http</text><path d="M324,94.4453 L334,94.4453 C349,94.4453 349,38.1484 364,38.1484 L374,38.1484 " fill="none" style="stroke: #383838; stroke-width: 1.0;"/><rect fill="#F8F8F8" filter="url(#f1vf3zmmh5r39q)" height="36.2969" rx="12.5" ry="12.5" style="stroke: #383838; stroke-width: 1.5;" width="45" x="374" y="76.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="25" x="384" y="99.292">tcp</text><path d="M324,94.4453 L334,94.4453 C349,94.4453 349,94.4453 364,94.4453 L374,94.4453 " fill="none" style="stroke: #383838; stroke-width: 1.0;"/><rect fill="#F8F8F8" filter="url(#f1vf3zmmh5r39q)" height="36.2969" rx="12.5" ry="12.5" style="stroke: #383838; stroke-width: 1.5;" width="58" x="374" y="132.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="38" x="384" y="155.5889">gRPC</text><path d="M324,94.4453 L334,94.4453 C349,94.4453 349,150.7422 364,150.7422 L374,150.7422 " fill="none" style="stroke: #383838; stroke-width: 1.0;"/><rect fill="#F8F8F8" filter="url(#f1vf3zmmh5r39q)" height="36.2969" rx="12.5" ry="12.5" style="stroke: #383838; stroke-width: 1.5;" width="73" x="132" y="76.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="53" x="142" y="99.292">CLI, API</text><rect fill="#F8F8F8" filter="url(#f1vf3zmmh5r39q)" height="36.2969" rx="12.5" ry="12.5" style="stroke: #383838; stroke-width: 1.5;" width="72" x="10" y="48.1484"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="52" x="20" y="71.1436">expose</text><path d="M132,94.4453 L122,94.4453 C107,94.4453 107,66.2969 92,66.2969 L82,66.2969 " fill="none" style="stroke: #383838; stroke-width: 1.0;"/><rect fill="#F8F8F8" filter="url(#f1vf3zmmh5r39q)" height="36.2969" rx="12.5" ry="12.5" style="stroke: #383838; stroke-width: 1.5;" width="52" x="30" y="104.4453"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="40" y="127.4404">bind</text><path d="M132,94.4453 L122,94.4453 C107,94.4453 107,122.5938 92,122.5938 L82,122.5938 " fill="none" style="stroke: #383838; stroke-width: 1.0;"/><path d="M255,94.4453 L245,94.4453 C230,94.4453 230,94.4453 215,94.4453 L205,94.4453 " fill="none" style="stroke: #383838; stroke-width: 1.0;"/><!--MD5=[1df65f897537c77b71da2f5b91bba3d1]
+@startmindmap
+skinparam monochrome true
+* Router
+** http
+** tcp
+** gRPC
+
+left
+
+** CLI, API
+*** expose
+*** bind
+@endmindmap
+
+PlantUML version 1.2020.11(Sat May 30 10:13:43 UTC 2020)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

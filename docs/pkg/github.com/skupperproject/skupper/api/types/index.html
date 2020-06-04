@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>types - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="http://localhost:6060/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="http://localhost:6060/lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.14";</script>
+<script src="http://localhost:6060/lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package types
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/skupperproject/skupper/api/types"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#AssemblySpec">type AssemblySpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ByServiceInterfaceAddress">type ByServiceInterfaceAddress</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ByServiceInterfaceAddress.Len">func (a ByServiceInterfaceAddress) Len() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ByServiceInterfaceAddress.Less">func (a ByServiceInterfaceAddress) Less(i, j int) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ByServiceInterfaceAddress.Swap">func (a ByServiceInterfaceAddress) Swap(i, j int)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CertAuthority">type CertAuthority</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ConfigMap">type ConfigMap</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Connector">type Connector</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ConnectorRole">type ConnectorRole</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ConsoleAuthMode">type ConsoleAuthMode</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Credential">type Credential</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DeploymentSpec">type DeploymentSpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Headless">type Headless</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#KeyValue">type KeyValue</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Listener">type Listener</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Role">type Role</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RoleBinding">type RoleBinding</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Route">type Route</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Service">type Service</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ServiceAccount">type ServiceAccount</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ServiceInterface">type ServiceInterface</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ServiceInterfaceTarget">type ServiceInterfaceTarget</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SslProfile">type SslProfile</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#TransportConnectedSites">type TransportConnectedSites</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#TransportMode">type TransportMode</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#User">type User</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#VanConnectorCreateOptions">type VanConnectorCreateOptions</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#VanConnectorInspectResponse">type VanConnectorInspectResponse</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#VanRouterCreateOptions">type VanRouterCreateOptions</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#VanRouterInspectResponse">type VanRouterInspectResponse</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#VanRouterSpec">type VanRouterSpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#VanRouterStatusSpec">type VanRouterStatusSpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#VanServiceInterfaceCreateOptions">type VanServiceInterfaceCreateOptions</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/client.go">client.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go">types.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// NamespaceDefault means the VAN is in the  skupper namespace which is applied when not specified by clients</span>
+    <span id="NamespaceDefault">NamespaceDefault</span>    <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper&#34;
+    <span id="DefaultVanName">DefaultVanName</span>      <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper&#34;
+    <span id="ClusterLocalPostfix">ClusterLocalPostfix</span> <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;.svc.cluster.local&#34;
+)</pre>
+			
+				<p>
+Transport constants
+</p>
+
+				<pre>const (
+    <span id="TransportDeploymentName">TransportDeploymentName</span>     <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper-router&#34;
+    <span id="TransportComponentName">TransportComponentName</span>      <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;router&#34;
+    <span id="DefaultTransportImage">DefaultTransportImage</span>       <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;quay.io/interconnectedcloud/qdrouterd&#34;
+    <span id="TransportContainerName">TransportContainerName</span>      <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;router&#34;
+    <span id="TransportLivenessPort">TransportLivenessPort</span>       <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>  = 9090
+    <span id="TransportServiceAccountName">TransportServiceAccountName</span> <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper&#34;
+    <span id="TransportViewRoleName">TransportViewRoleName</span>       <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper-view&#34;
+    <span id="TransportEnvConfig">TransportEnvConfig</span>          <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;QDROUTERD_CONF&#34;
+    <span id="TransportSaslConfig">TransportSaslConfig</span>         <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper-sasl-config&#34;
+)</pre>
+			
+				<p>
+Controller constants
+</p>
+
+				<pre>const (
+    <span id="ControllerDeploymentName">ControllerDeploymentName</span> <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper-proxy-controller&#34;
+    <span id="ControllerComponentName">ControllerComponentName</span>  <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;controller&#34;
+    <span class="comment">//DefaultControllerImage       string = &#34;quay.io/skupper/controller-golang&#34; //TODO: rename</span>
+    <span id="DefaultControllerImage">DefaultControllerImage</span>       <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;quay.io/skupper/controller&#34;
+    <span id="ControllerContainerName">ControllerContainerName</span>      <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;proxy-controller&#34;
+    <span id="DefaultProxyImage">DefaultProxyImage</span>            <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;quay.io/skupper/proxy&#34;
+    <span id="ControllerServiceAccountName">ControllerServiceAccountName</span> <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper-proxy-controller&#34;
+    <span id="ControllerConfigPath">ControllerConfigPath</span>         <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;/etc/messaging/&#34;
+    <span id="ControllerEditRoleName">ControllerEditRoleName</span>       <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper-edit&#34;
+)</pre>
+			
+				<p>
+Skupper qualifiers
+</p>
+
+				<pre>const (
+    <span id="BaseQualifier">BaseQualifier</span>             <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper.io&#34;
+    <span id="InternalQualifier">InternalQualifier</span>         <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;internal.&#34; + <a href="index.html#BaseQualifier">BaseQualifier</a>
+    <span id="AddressQualifier">AddressQualifier</span>          <a href="http://localhost:6060/pkg/builtin/#string">string</a> = <a href="index.html#BaseQualifier">BaseQualifier</a> + &#34;/address&#34;
+    <span id="ProxyQualifier">ProxyQualifier</span>            <a href="http://localhost:6060/pkg/builtin/#string">string</a> = <a href="index.html#BaseQualifier">BaseQualifier</a> + &#34;/proxy&#34;
+    <span id="VersionQualifier">VersionQualifier</span>          <a href="http://localhost:6060/pkg/builtin/#string">string</a> = <a href="index.html#BaseQualifier">BaseQualifier</a> + &#34;/version&#34;
+    <span id="WeightQualifier">WeightQualifier</span>           <a href="http://localhost:6060/pkg/builtin/#string">string</a> = <a href="index.html#BaseQualifier">BaseQualifier</a> + &#34;/weight&#34;
+    <span id="ControlledQualifier">ControlledQualifier</span>       <a href="http://localhost:6060/pkg/builtin/#string">string</a> = <a href="index.html#InternalQualifier">InternalQualifier</a> + &#34;/controlled&#34;
+    <span id="ServiceQualifier">ServiceQualifier</span>          <a href="http://localhost:6060/pkg/builtin/#string">string</a> = <a href="index.html#InternalQualifier">InternalQualifier</a> + &#34;/service&#34;
+    <span id="OriginQualifier">OriginQualifier</span>           <a href="http://localhost:6060/pkg/builtin/#string">string</a> = <a href="index.html#InternalQualifier">InternalQualifier</a> + &#34;/origin&#34;
+    <span id="OriginalSelectorQualifier">OriginalSelectorQualifier</span> <a href="http://localhost:6060/pkg/builtin/#string">string</a> = <a href="index.html#InternalQualifier">InternalQualifier</a> + &#34;/origin&#34;
+    <span id="TypeQualifier">TypeQualifier</span>             <a href="http://localhost:6060/pkg/builtin/#string">string</a> = <a href="index.html#InternalQualifier">InternalQualifier</a> + &#34;/type&#34;
+    <span id="TypeProxyQualifier">TypeProxyQualifier</span>        <a href="http://localhost:6060/pkg/builtin/#string">string</a> = <a href="index.html#TypeQualifier">TypeQualifier</a> + &#34;=proxy&#34;
+)</pre>
+			
+				<p>
+Console constants
+</p>
+
+				<pre>const (
+    <span id="ConsolePortName">ConsolePortName</span>                        <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;console&#34;
+    <span id="ConsoleServiceName">ConsoleServiceName</span>                     <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper-console&#34;
+    <span id="ConsoleDefaultServicePort">ConsoleDefaultServicePort</span>              <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>  = 8080
+    <span id="ConsoleDefaultServiceTargetPort">ConsoleDefaultServiceTargetPort</span>        <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>  = 8080
+    <span id="ConsoleOpenShiftServicePort">ConsoleOpenShiftServicePort</span>            <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>  = 8888
+    <span id="ConsoleOpenShiftOauthServicePort">ConsoleOpenShiftOauthServicePort</span>       <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>  = 443
+    <span id="ConsoleOpenShiftOuathServiceTargetPort">ConsoleOpenShiftOuathServiceTargetPort</span> <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>  = 8443
+    <span id="ConsoleOpenShiftServingCerts">ConsoleOpenShiftServingCerts</span>           <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper-proxy-certs&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span id="ConsoleAuthModeOpenshift">ConsoleAuthModeOpenshift</span> <a href="index.html#ConsoleAuthMode">ConsoleAuthMode</a> = &#34;openshift&#34;
+    <span id="ConsoleAuthModeInternal">ConsoleAuthModeInternal</span>                  = &#34;internal&#34;
+    <span id="ConsoleAuthModeUnsecured">ConsoleAuthModeUnsecured</span>                 = &#34;unsecured&#34;
+)</pre>
+			
+				<p>
+Assembly constants
+</p>
+
+				<pre>const (
+    <span id="EdgeRole">EdgeRole</span>                <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;edge&#34;
+    <span id="EdgeRouteName">EdgeRouteName</span>           <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper-edge&#34;
+    <span id="EdgeListenerPort">EdgeListenerPort</span>        <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>  = 45671
+    <span id="InterRouterRole">InterRouterRole</span>         <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;inter-router&#34;
+    <span id="InterRouterListenerPort">InterRouterListenerPort</span> <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>  = 55671
+    <span id="InterRouterRouteName">InterRouterRouteName</span>    <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper-inter-router&#34;
+    <span id="InterRouterProfile">InterRouterProfile</span>      <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper-internal&#34;
+)</pre>
+			
+				<p>
+OpenShift constants
+</p>
+
+				<pre>const (
+    <span id="OpenShiftServingCertSecretName">OpenShiftServingCertSecretName</span> <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;service.alpha.openshift.io/serving-cert-secret-name&#34;
+)</pre>
+			
+				<p>
+Service Interface constants
+</p>
+
+				<pre>const (
+    <span id="ServiceInterfaceConfigMap">ServiceInterfaceConfigMap</span> <a href="http://localhost:6060/pkg/builtin/#string">string</a> = &#34;skupper-services&#34;
+)</pre>
+			
+				<p>
+Service Sync constants
+</p>
+
+				<pre>const (
+    <span id="ServiceSyncAddress">ServiceSyncAddress</span> = &#34;mc/$skupper-service-sync&#34;
+)</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var <span id="ControllerEditPolicyRule">ControllerEditPolicyRule</span> = []<a href="http://localhost:6060/pkg/k8s.io/api/rbac/v1/">rbacv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/rbac/v1/#PolicyRule">PolicyRule</a>{
+    {
+        <a href="index.html#Verbs">Verbs</a>:     []<a href="http://localhost:6060/pkg/builtin/#string">string</a>{&#34;get&#34;, &#34;list&#34;, &#34;watch&#34;, &#34;create&#34;, &#34;update&#34;, &#34;delete&#34;},
+        <a href="index.html#APIGroups">APIGroups</a>: []<a href="http://localhost:6060/pkg/builtin/#string">string</a>{&#34;&#34;},
+        <a href="index.html#Resources">Resources</a>: []<a href="http://localhost:6060/pkg/builtin/#string">string</a>{&#34;services&#34;, &#34;configmaps&#34;},
+    },
+    {
+        <a href="index.html#Verbs">Verbs</a>:     []<a href="http://localhost:6060/pkg/builtin/#string">string</a>{&#34;get&#34;, &#34;list&#34;, &#34;watch&#34;, &#34;create&#34;, &#34;update&#34;, &#34;delete&#34;},
+        <a href="index.html#APIGroups">APIGroups</a>: []<a href="http://localhost:6060/pkg/builtin/#string">string</a>{&#34;apps&#34;},
+        <a href="index.html#Resources">Resources</a>: []<a href="http://localhost:6060/pkg/builtin/#string">string</a>{&#34;deployments&#34;, &#34;statefulsets&#34;},
+    },
+}</pre>
+			
+				
+				<pre>var <span id="TransportPrometheusAnnotations">TransportPrometheusAnnotations</span> = map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#string">string</a>{
+    &#34;prometheus.io/port&#34;:   &#34;9090&#34;,
+    &#34;prometheus.io/scrape&#34;: &#34;true&#34;,
+}</pre>
+			
+				
+				<pre>var <span id="TransportViewPolicyRule">TransportViewPolicyRule</span> = []<a href="http://localhost:6060/pkg/k8s.io/api/rbac/v1/">rbacv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/rbac/v1/#PolicyRule">PolicyRule</a>{
+    {
+        <a href="index.html#Verbs">Verbs</a>:     []<a href="http://localhost:6060/pkg/builtin/#string">string</a>{&#34;get&#34;, &#34;list&#34;, &#34;watch&#34;},
+        <a href="index.html#APIGroups">APIGroups</a>: []<a href="http://localhost:6060/pkg/builtin/#string">string</a>{&#34;&#34;},
+        <a href="index.html#Resources">Resources</a>: []<a href="http://localhost:6060/pkg/builtin/#string">string</a>{&#34;pods&#34;},
+    },
+}</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="AssemblySpec">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=7271:7971#L183">AssemblySpec</a>
+				<a class="permalink" href="index.html#AssemblySpec">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+AssemblySpec for the links and connectors that form the VAN topology
+</p>
+
+			<pre>type AssemblySpec struct {
+<span id="AssemblySpec.Name"></span>    Name                  <a href="http://localhost:6060/pkg/builtin/#string">string</a>       `json:&#34;name,omitempty&#34;`
+<span id="AssemblySpec.Mode"></span>    Mode                  <a href="http://localhost:6060/pkg/builtin/#string">string</a>       `json:&#34;mode,omitempty&#34;`
+<span id="AssemblySpec.Listeners"></span>    Listeners             []<a href="index.html#Listener">Listener</a>   `json:&#34;listeners,omitempty&#34;`
+<span id="AssemblySpec.InterRouterListeners"></span>    InterRouterListeners  []<a href="index.html#Listener">Listener</a>   `json:&#34;interRouterListeners,omitempty&#34;`
+<span id="AssemblySpec.EdgeListeners"></span>    EdgeListeners         []<a href="index.html#Listener">Listener</a>   `json:&#34;edgeListeners,omitempty&#34;`
+<span id="AssemblySpec.SslProfiles"></span>    SslProfiles           []<a href="index.html#SslProfile">SslProfile</a> `json:&#34;sslProfiles,omitempty&#34;`
+<span id="AssemblySpec.Connectors"></span>    Connectors            []<a href="index.html#Connector">Connector</a>  `json:&#34;connectors,omitempty&#34;`
+<span id="AssemblySpec.InterRouterConnectors"></span>    InterRouterConnectors []<a href="index.html#Connector">Connector</a>  `json:&#34;interRouterConnectors,omitempty&#34;`
+<span id="AssemblySpec.EdgeConnectors"></span>    EdgeConnectors        []<a href="index.html#Connector">Connector</a>  `json:&#34;edgeConnectors,omitempty&#34;`
+<span id="AssemblySpec.Routes"></span>    Routes                []<a href="index.html#Route">Route</a>      `json:&#34;routes,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ByServiceInterfaceAddress">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=11546:11595#L323">ByServiceInterfaceAddress</a>
+				<a class="permalink" href="index.html#ByServiceInterfaceAddress">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ByServiceInterfaceAddress []<a href="index.html#ServiceInterface">ServiceInterface</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ByServiceInterfaceAddress.Len">func (ByServiceInterfaceAddress) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=11597:11641#L325">Len</a>
+					<a class="permalink" href="index.html#ByServiceInterfaceAddress.Len">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (a <a href="index.html#ByServiceInterfaceAddress">ByServiceInterfaceAddress</a>) Len() <a href="http://localhost:6060/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ByServiceInterfaceAddress.Less">func (ByServiceInterfaceAddress) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=11662:11716#L329">Less</a>
+					<a class="permalink" href="index.html#ByServiceInterfaceAddress.Less">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (a <a href="index.html#ByServiceInterfaceAddress">ByServiceInterfaceAddress</a>) Less(i, j <a href="http://localhost:6060/pkg/builtin/#int">int</a>) <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ByServiceInterfaceAddress.Swap">func (ByServiceInterfaceAddress) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=11758:11807#L333">Swap</a>
+					<a class="permalink" href="index.html#ByServiceInterfaceAddress.Swap">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (a <a href="index.html#ByServiceInterfaceAddress">ByServiceInterfaceAddress</a>) Swap(i, j <a href="http://localhost:6060/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CertAuthority">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=10689:10731#L287">CertAuthority</a>
+				<a class="permalink" href="index.html#CertAuthority">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type CertAuthority struct {
+<span id="CertAuthority.Name"></span>    Name <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ConfigMap">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=9680:9819#L242">ConfigMap</a>
+				<a class="permalink" href="index.html#ConfigMap">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ConfigMap struct {
+<span id="ConfigMap.Name"></span>    Name  <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;name,omitempty&#34;`
+<span id="ConfigMap.Key"></span>    Key   <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;name,omitempty&#34;`
+<span id="ConfigMap.Value"></span>    Value <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;name,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Connector">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=9216:9678#L230">Connector</a>
+				<a class="permalink" href="index.html#Connector">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Connector struct {
+<span id="Connector.Name"></span>    Name           <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;name,omitempty&#34;`
+<span id="Connector.Role"></span>    Role           <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;role,omitempty&#34;`
+<span id="Connector.Host"></span>    Host           <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;host&#34;`
+<span id="Connector.Port"></span>    Port           <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;port&#34;`
+<span id="Connector.RouteContainer"></span>    RouteContainer <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>   `json:&#34;routeContainer,omitempty&#34;`
+<span id="Connector.Cost"></span>    Cost           <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>  `json:&#34;cost,omitempty&#34;`
+<span id="Connector.VerifyHostname"></span>    VerifyHostname <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>   `json:&#34;verifyHostname,omitempty&#34;`
+<span id="Connector.SslProfile"></span>    SslProfile     <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;sslProfile,omitempty&#34;`
+<span id="Connector.LinkCapacity"></span>    LinkCapacity   <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>  `json:&#34;linkCapacity,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ConnectorRole">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=9072:9097#L223">ConnectorRole</a>
+				<a class="permalink" href="index.html#ConnectorRole">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ConnectorRole <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span id="ConnectorRoleInterRouter">ConnectorRoleInterRouter</span> <a href="index.html#ConnectorRole">ConnectorRole</a> = &#34;inter-router&#34;
+    <span id="ConnectorRoleEdge">ConnectorRoleEdge</span>                      = &#34;edge&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ConsoleAuthMode">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=4695:4722#L125">ConsoleAuthMode</a>
+				<a class="permalink" href="index.html#ConsoleAuthMode">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ConsoleAuthMode <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Credential">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=10545:10687#L278">Credential</a>
+				<a class="permalink" href="index.html#Credential">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Credential struct {
+<span id="Credential.CA"></span>    CA          <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="Credential.Name"></span>    Name        <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="Credential.Subject"></span>    Subject     <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="Credential.Hosts"></span>    Hosts       <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="Credential.ConnectJson"></span>    ConnectJson <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+<span id="Credential.Post"></span>    Post        <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DeploymentSpec">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=6206:7197#L165">DeploymentSpec</a>
+				<a class="permalink" href="index.html#DeploymentSpec">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+DeploymentSpec for the VAN router or controller components to run within a cluster
+</p>
+
+			<pre>type DeploymentSpec struct {
+<span id="DeploymentSpec.Image"></span>    Image           <a href="http://localhost:6060/pkg/builtin/#string">string</a>                 `json:&#34;image,omitempty&#34;`
+<span id="DeploymentSpec.Replicas"></span>    Replicas        <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>                  `json:&#34;replicas,omitempty&#34;`
+<span id="DeploymentSpec.LivenessPort"></span>    LivenessPort    <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>                  `json:&#34;livenessPort,omitempty&#34;`
+<span id="DeploymentSpec.Labels"></span>    Labels          map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#string">string</a>      `json:&#34;labels,omitempty&#34;`
+<span id="DeploymentSpec.Annotations"></span>    Annotations     map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#string">string</a>      `json:&#34;annotations,omitempty&#34;`
+<span id="DeploymentSpec.EnvVar"></span>    EnvVar          []<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#EnvVar">EnvVar</a>        `json:&#34;envVar,omitempty&#34;`
+<span id="DeploymentSpec.Ports"></span>    Ports           []<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#ContainerPort">ContainerPort</a> `json:&#34;ports,omitempty&#34;`
+<span id="DeploymentSpec.Volumes"></span>    Volumes         []<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Volume">Volume</a>        `json:&#34;volumes,omitempty&#34;`
+<span id="DeploymentSpec.VolumeMounts"></span>    VolumeMounts    []<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#VolumeMount">VolumeMount</a>   `json:&#34;volumeMounts,omitempty&#34;`
+<span id="DeploymentSpec.ConfigMaps"></span>    ConfigMaps      []<a href="index.html#ConfigMap">ConfigMap</a>            `json:&#34;configMaps,omitempty&#34;`
+<span id="DeploymentSpec.Roles"></span>    Roles           []<a href="index.html#Role">Role</a>                 `json:&#34;roles,omitempty&#34;`
+<span id="DeploymentSpec.RoleBindings"></span>    RoleBindings    []<a href="index.html#RoleBinding">RoleBinding</a>          `json:&#34;roleBinding,omitempty&#34;`
+<span id="DeploymentSpec.ServiceAccounts"></span>    ServiceAccounts []<a href="index.html#ServiceAccount">ServiceAccount</a>       `json:&#34;serviceAccounts,omitempty&#34;`
+<span id="DeploymentSpec.Services"></span>    Services        []<a href="index.html#Service">Service</a>              `json:&#34;services,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Headless">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=11405:11544#L317">Headless</a>
+				<a class="permalink" href="index.html#Headless">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Headless struct {
+<span id="Headless.Name"></span>    Name       <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;name&#34;`
+<span id="Headless.Size"></span>    Size       <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:&#34;size&#34;`
+<span id="Headless.TargetPort"></span>    TargetPort <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:&#34;targetPort,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="KeyValue">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=949:992#L21">KeyValue</a>
+				<a class="permalink" href="index.html#KeyValue">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+KeyValue holds a key/value pair
+</p>
+
+			<pre>type KeyValue struct {
+<span id="KeyValue.Key"></span>    Key, Value <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Listener">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=8335:8885#L203">Listener</a>
+				<a class="permalink" href="index.html#Listener">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Listener struct {
+<span id="Listener.Name"></span>    Name             <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;name,omitempty&#34;`
+<span id="Listener.Host"></span>    Host             <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;host,omitempty&#34;`
+<span id="Listener.Port"></span>    Port             <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>  `json:&#34;port&#34;`
+<span id="Listener.RouteContainer"></span>    RouteContainer   <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>   `json:&#34;routeContainer,omitempty&#34;`
+<span id="Listener.Http"></span>    Http             <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>   `json:&#34;http,omitempty&#34;`
+<span id="Listener.Cost"></span>    Cost             <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>  `json:&#34;cost,omitempty&#34;`
+<span id="Listener.SslProfile"></span>    SslProfile       <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;sslProfile,omitempty&#34;`
+<span id="Listener.SaslMechanisms"></span>    SaslMechanisms   <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;saslMechanisms,omitempty&#34;`
+<span id="Listener.AuthenticatePeer"></span>    AuthenticatePeer <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>   `json:&#34;authenticatePeer,omitempty&#34;`
+<span id="Listener.LinkCapacity"></span>    LinkCapacity     <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>  `json:&#34;linkCapacity,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Role">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=9821:9944#L248">Role</a>
+				<a class="permalink" href="index.html#Role">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Role struct {
+<span id="Role.Name"></span>    Name  <a href="http://localhost:6060/pkg/builtin/#string">string</a>              `json:&#34;name,omitempty&#34;`
+<span id="Role.Rules"></span>    Rules []<a href="http://localhost:6060/pkg/k8s.io/api/rbac/v1/">rbacv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/rbac/v1/#PolicyRule">PolicyRule</a> `json:&#34;rules,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RoleBinding">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=9946:10077#L253">RoleBinding</a>
+				<a class="permalink" href="index.html#RoleBinding">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type RoleBinding struct {
+<span id="RoleBinding.ServiceAccount"></span>    ServiceAccount <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;serviceAccount,omitempty&#34;`
+<span id="RoleBinding.Role"></span>    Role           <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;role,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Route">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=10244:10373#L263">Route</a>
+				<a class="permalink" href="index.html#Route">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Route struct {
+<span id="Route.Name"></span>    Name          <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="Route.TargetService"></span>    TargetService <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="Route.TargetPort"></span>    TargetPort    <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="Route.Termination"></span>    Termination   <a href="http://localhost:6060/pkg/github.com/openshift/api/route/v1/">routev1</a>.<a href="http://localhost:6060/pkg/github.com/openshift/api/route/v1/#TLSTerminationType">TLSTerminationType</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Service">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=10375:10543#L270">Service</a>
+				<a class="permalink" href="index.html#Service">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Service struct {
+<span id="Service.Name"></span>    Name        <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="Service.Type"></span>    Type        <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="Service.Ports"></span>    Ports       []<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#ServicePort">ServicePort</a>
+<span id="Service.Annotations"></span>    Annotations map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="Service.Termination"></span>    Termination <a href="http://localhost:6060/pkg/github.com/openshift/api/route/v1/">routev1</a>.<a href="http://localhost:6060/pkg/github.com/openshift/api/route/v1/#TLSTerminationType">TLSTerminationType</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ServiceAccount">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=10079:10242#L258">ServiceAccount</a>
+				<a class="permalink" href="index.html#ServiceAccount">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ServiceAccount struct {
+<span id="ServiceAccount.ServiceAccount"></span>    ServiceAccount <a href="http://localhost:6060/pkg/builtin/#string">string</a>            `json:&#34;serviceAccount,omitempty&#34;`
+<span id="ServiceAccount.Annotations"></span>    Annotations    map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;annotations,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ServiceInterface">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=10872:11234#L302">ServiceInterface</a>
+				<a class="permalink" href="index.html#ServiceInterface">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ServiceInterface struct {
+<span id="ServiceInterface.Address"></span>    Address  <a href="http://localhost:6060/pkg/builtin/#string">string</a>                   `json:&#34;address&#34;`
+<span id="ServiceInterface.Protocol"></span>    Protocol <a href="http://localhost:6060/pkg/builtin/#string">string</a>                   `json:&#34;protocol&#34;`
+<span id="ServiceInterface.Port"></span>    Port     <a href="http://localhost:6060/pkg/builtin/#int">int</a>                      `json:&#34;port&#34;`
+<span id="ServiceInterface.Headless"></span>    Headless *<a href="index.html#Headless">Headless</a>                `json:&#34;headless,omitempty&#34;`
+<span id="ServiceInterface.Targets"></span>    Targets  []<a href="index.html#ServiceInterfaceTarget">ServiceInterfaceTarget</a> `json:&#34;targets&#34;`
+<span id="ServiceInterface.Origin"></span>    Origin   <a href="http://localhost:6060/pkg/builtin/#string">string</a>                   `json:&#34;origin,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ServiceInterfaceTarget">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=11236:11403#L311">ServiceInterfaceTarget</a>
+				<a class="permalink" href="index.html#ServiceInterfaceTarget">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ServiceInterfaceTarget struct {
+<span id="ServiceInterfaceTarget.Name"></span>    Name       <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;name,omitempty&#34;`
+<span id="ServiceInterfaceTarget.Selector"></span>    Selector   <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;selector&#34;`
+<span id="ServiceInterfaceTarget.TargetPort"></span>    TargetPort <a href="http://localhost:6060/pkg/builtin/#int">int</a>    `json:&#34;targetPort,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SslProfile">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=8887:9070#L216">SslProfile</a>
+				<a class="permalink" href="index.html#SslProfile">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type SslProfile struct {
+<span id="SslProfile.Name"></span>    Name   <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;name,omitempty&#34;`
+<span id="SslProfile.Cert"></span>    Cert   <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;cert,omitempty&#34;`
+<span id="SslProfile.Key"></span>    Key    <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;key,omitempty&#34;`
+<span id="SslProfile.CaCert"></span>    CaCert <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;caCert,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="TransportConnectedSites">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=10789:10870#L296">TransportConnectedSites</a>
+				<a class="permalink" href="index.html#TransportConnectedSites">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type TransportConnectedSites struct {
+<span id="TransportConnectedSites.Direct"></span>    Direct   <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+<span id="TransportConnectedSites.Indirect"></span>    Indirect <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+<span id="TransportConnectedSites.Total"></span>    Total    <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="TransportMode">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=1083:1108#L26">TransportMode</a>
+				<a class="permalink" href="index.html#TransportMode">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+TransportMode describes how a qdr is intended to be deployed, either interior or edge
+</p>
+
+			<pre>type TransportMode <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// TransportModeInterior means the qdr will participate in inter-router protocol exchanges</span>
+    <span id="TransportModeInterior">TransportModeInterior</span> <a href="index.html#TransportMode">TransportMode</a> = &#34;interior&#34;
+    <span class="comment">// TransportModeEdge means that the qdr will connect to interior routers for network access</span>
+    <span id="TransportModeEdge">TransportModeEdge</span> = &#34;edge&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="User">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=10733:10787#L291">User</a>
+				<a class="permalink" href="index.html#User">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type User struct {
+<span id="User.Name"></span>    Name     <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="User.Password"></span>    Password <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="VanConnectorCreateOptions">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/client.go?s=15:81#L1">VanConnectorCreateOptions</a>
+				<a class="permalink" href="index.html#VanConnectorCreateOptions">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type VanConnectorCreateOptions struct {
+<span id="VanConnectorCreateOptions.Name"></span>    Name <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="VanConnectorCreateOptions.Cost"></span>    Cost <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="VanConnectorInspectResponse">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/client.go?s=665:746#L26">VanConnectorInspectResponse</a>
+				<a class="permalink" href="index.html#VanConnectorInspectResponse">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type VanConnectorInspectResponse struct {
+<span id="VanConnectorInspectResponse.Connector"></span>    Connector *<a href="index.html#Connector">Connector</a>
+<span id="VanConnectorInspectResponse.Connected"></span>    Connected <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="VanRouterCreateOptions">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/client.go?s=83:370#L1">VanRouterCreateOptions</a>
+				<a class="permalink" href="index.html#VanRouterCreateOptions">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type VanRouterCreateOptions struct {
+<span id="VanRouterCreateOptions.SkupperName"></span>    SkupperName       <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="VanRouterCreateOptions.IsEdge"></span>    IsEdge            <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+<span id="VanRouterCreateOptions.EnableController"></span>    EnableController  <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+<span id="VanRouterCreateOptions.EnableServiceSync"></span>    EnableServiceSync <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+<span id="VanRouterCreateOptions.EnableConsole"></span>    EnableConsole     <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+<span id="VanRouterCreateOptions.AuthMode"></span>    AuthMode          <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="VanRouterCreateOptions.User"></span>    User              <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="VanRouterCreateOptions.Password"></span>    Password          <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="VanRouterCreateOptions.ClusterLocal"></span>    ClusterLocal      <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+<span id="VanRouterCreateOptions.Replicas"></span>    Replicas          <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="VanRouterInspectResponse">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/client.go?s=509:663#L19">VanRouterInspectResponse</a>
+				<a class="permalink" href="index.html#VanRouterInspectResponse">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type VanRouterInspectResponse struct {
+<span id="VanRouterInspectResponse.Status"></span>    Status            <a href="index.html#VanRouterStatusSpec">VanRouterStatusSpec</a>
+<span id="VanRouterInspectResponse.TransportVersion"></span>    TransportVersion  <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="VanRouterInspectResponse.ControllerVersion"></span>    ControllerVersion <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="VanRouterInspectResponse.ExposedServices"></span>    ExposedServices   <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="VanRouterSpec">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=5543:6118#L152">VanRouterSpec</a>
+				<a class="permalink" href="index.html#VanRouterSpec">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+VanRouterSpec is the specification of VAN network with router, controller and assembly
+</p>
+
+			<pre>type VanRouterSpec struct {
+<span id="VanRouterSpec.Name"></span>    Name           <a href="http://localhost:6060/pkg/builtin/#string">string</a>          `json:&#34;name,omitempty&#34;`
+<span id="VanRouterSpec.Namespace"></span>    Namespace      <a href="http://localhost:6060/pkg/builtin/#string">string</a>          `json:&#34;namespace,omitempty&#34;`
+<span id="VanRouterSpec.AuthMode"></span>    AuthMode       <a href="index.html#ConsoleAuthMode">ConsoleAuthMode</a> `json:&#34;authMode,omitempty&#34;`
+<span id="VanRouterSpec.Transport"></span>    Transport      <a href="index.html#DeploymentSpec">DeploymentSpec</a>  `json:&#34;transport,omitempty&#34;`
+<span id="VanRouterSpec.Controller"></span>    Controller     <a href="index.html#DeploymentSpec">DeploymentSpec</a>  `json:&#34;controller,omitempty&#34;`
+<span id="VanRouterSpec.Assembly"></span>    Assembly       <a href="index.html#AssemblySpec">AssemblySpec</a>    `json:&#34;assembly,omitempty&#34;`
+<span id="VanRouterSpec.Users"></span>    Users          []<a href="index.html#User">User</a>          `json:&#34;users,omitempty&#34;`
+<span id="VanRouterSpec.CertAuthoritys"></span>    CertAuthoritys []<a href="index.html#CertAuthority">CertAuthority</a> `json:&#34;certAuthoritys,omitempty&#34;`
+<span id="VanRouterSpec.Credentials"></span>    Credentials    []<a href="index.html#Credential">Credential</a>    `json:&#34;credentials,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="VanRouterStatusSpec">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/types.go?s=7973:8333#L196">VanRouterStatusSpec</a>
+				<a class="permalink" href="index.html#VanRouterStatusSpec">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type VanRouterStatusSpec struct {
+<span id="VanRouterStatusSpec.Mode"></span>    Mode                   <a href="http://localhost:6060/pkg/builtin/#string">string</a>                  `json:&#34;mode,omitempty&#34;`
+<span id="VanRouterStatusSpec.TransportReadyReplicas"></span>    TransportReadyReplicas <a href="http://localhost:6060/pkg/builtin/#int32">int32</a>                   `json:&#34;transportReadyReplicas,omitempty&#34;`
+<span id="VanRouterStatusSpec.ConnectedSites"></span>    ConnectedSites         <a href="index.html#TransportConnectedSites">TransportConnectedSites</a> `json:&#34;connectedSites,omitempty&#34;`
+<span id="VanRouterStatusSpec.BindingsCount"></span>    BindingsCount          <a href="http://localhost:6060/pkg/builtin/#int">int</a>                     `json:&#34;bindingsCount,omitempty&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="VanServiceInterfaceCreateOptions">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/api/types/client.go?s=372:507#L11">VanServiceInterfaceCreateOptions</a>
+				<a class="permalink" href="index.html#VanServiceInterfaceCreateOptions">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type VanServiceInterfaceCreateOptions struct {
+<span id="VanServiceInterfaceCreateOptions.Protocol"></span>    Protocol   <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="VanServiceInterfaceCreateOptions.Address"></span>    Address    <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="VanServiceInterfaceCreateOptions.Port"></span>    Port       <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+<span id="VanServiceInterfaceCreateOptions.TargetPort"></span>    TargetPort <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+<span id="VanServiceInterfaceCreateOptions.Headless"></span>    Headless   <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.14.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="http://localhost:6060/doc/tos.html">Terms of Service</a> |
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>client - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="http://localhost:6060/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="http://localhost:6060/lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.14";</script>
+<script src="http://localhost:6060/lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package client
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/skupperproject/skupper/client"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#GetVanControllerSpec">func GetVanControllerSpec(options types.VanRouterCreateOptions, van *types.VanRouterSpec, transport *appsv1.Deployment)</a></dd>
+			
+				
+				<dd><a href="index.html#GetVanRouterSpecFromOpts">func GetVanRouterSpecFromOpts(options types.VanRouterCreateOptions, client *VanClient) *types.VanRouterSpec</a></dd>
+			
+			
+				
+				<dd><a href="index.html#HostPort">type HostPort</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RouterHostPorts">type RouterHostPorts</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#VanClient">type VanClient</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewClient">func NewClient(namespace string, context string, kubeConfigPath string) (*VanClient, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VanClient.VanConnectorCreate">func (cli *VanClient) VanConnectorCreate(ctx context.Context, secretFile string, options types.VanConnectorCreateOptions) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VanClient.VanConnectorInspect">func (cli *VanClient) VanConnectorInspect(ctx context.Context, name string) (*types.VanConnectorInspectResponse, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VanClient.VanConnectorList">func (cli *VanClient) VanConnectorList(ctx context.Context) ([]*types.Connector, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VanClient.VanConnectorRemove">func (cli *VanClient) VanConnectorRemove(ctx context.Context, name string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VanClient.VanConnectorTokenCreate">func (cli *VanClient) VanConnectorTokenCreate(ctx context.Context, subject string, secretFile string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VanClient.VanRouterCreate">func (cli *VanClient) VanRouterCreate(ctx context.Context, options types.VanRouterCreateOptions) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VanClient.VanRouterInspect">func (cli *VanClient) VanRouterInspect(ctx context.Context) (*types.VanRouterInspectResponse, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VanClient.VanRouterRemove">func (cli *VanClient) VanRouterRemove(ctx context.Context) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VanClient.VanServiceInterfaceCreate">func (cli *VanClient) VanServiceInterfaceCreate(ctx context.Context, targetType string, targetName string, options types.VanServiceInterfaceCreateOptions) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VanClient.VanServiceInterfaceList">func (cli *VanClient) VanServiceInterfaceList(ctx context.Context) ([]*types.ServiceInterface, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VanClient.VanServiceInterfaceRemove">func (cli *VanClient) VanServiceInterfaceRemove(ctx context.Context, targetType string, targetName string, address string) error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/client.go">client.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_connector_create.go">van_connector_create.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_connector_inspect.go">van_connector_inspect.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_connector_list.go">van_connector_list.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_connector_remove.go">van_connector_remove.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_connector_token_create.go">van_connector_token_create.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_router_create.go">van_router_create.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_router_inspect.go">van_router_inspect.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_router_remove.go">van_router_remove.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_serviceinterface_create.go">van_serviceinterface_create.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_serviceinterface_list.go">van_serviceinterface_list.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_serviceinterface_remove.go">van_serviceinterface_remove.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+			
+			
+			<h2 id="GetVanControllerSpec">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_router_create.go?s=484:603#L12">GetVanControllerSpec</a>
+				<a class="permalink" href="index.html#GetVanControllerSpec">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetVanControllerSpec(options <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#VanRouterCreateOptions">VanRouterCreateOptions</a>, van *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#VanRouterSpec">VanRouterSpec</a>, transport *<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/">appsv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/#Deployment">Deployment</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetVanRouterSpecFromOpts">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_router_create.go?s=2705:2812#L73">GetVanRouterSpecFromOpts</a>
+				<a class="permalink" href="index.html#GetVanRouterSpecFromOpts">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetVanRouterSpecFromOpts(options <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#VanRouterCreateOptions">VanRouterCreateOptions</a>, client *<a href="index.html#VanClient">VanClient</a>) *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#VanRouterSpec">VanRouterSpec</a></pre>
+			
+			
+			
+
+		
+		
+			
+			
+			<h2 id="HostPort">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_connector_token_create.go?s=479:529#L11">HostPort</a>
+				<a class="permalink" href="index.html#HostPort">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+TODO: should these move to types?
+</p>
+
+			<pre>type HostPort struct {
+<span id="HostPort.Host"></span>    Host <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="HostPort.Port"></span>    Port <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RouterHostPorts">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_connector_token_create.go?s=531:644#L16">RouterHostPorts</a>
+				<a class="permalink" href="index.html#RouterHostPorts">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type RouterHostPorts struct {
+<span id="RouterHostPorts.Edge"></span>    Edge        <a href="index.html#HostPort">HostPort</a>
+<span id="RouterHostPorts.InterRouter"></span>    InterRouter <a href="index.html#HostPort">HostPort</a>
+<span id="RouterHostPorts.Hosts"></span>    Hosts       <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="RouterHostPorts.LocalOnly"></span>    LocalOnly   <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="VanClient">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/client.go?s=506:659#L6">VanClient</a>
+				<a class="permalink" href="index.html#VanClient">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+A VAN Client manages orchestration and communications with the network components
+</p>
+
+			<pre>type VanClient struct {
+<span id="VanClient.Namespace"></span>    Namespace   <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="VanClient.KubeClient"></span>    KubeClient  <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>
+<span id="VanClient.RouteClient"></span>    RouteClient *<a href="http://localhost:6060/pkg/github.com/openshift/client-go/route/clientset/versioned/typed/route/v1/">routev1client</a>.<a href="http://localhost:6060/pkg/github.com/openshift/client-go/route/clientset/versioned/typed/route/v1/#RouteV1Client">RouteV1Client</a>
+<span id="VanClient.RestConfig"></span>    RestConfig  *<a href="http://localhost:6060/pkg/k8s.io/client-go/rest/">restclient</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/rest/#Config">Config</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewClient">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/client.go?s=661:752#L13">NewClient</a>
+					<a class="permalink" href="index.html#NewClient">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewClient(namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, context <a href="http://localhost:6060/pkg/builtin/#string">string</a>, kubeConfigPath <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (*<a href="index.html#VanClient">VanClient</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="VanClient.VanConnectorCreate">func (*VanClient) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_connector_create.go?s=1661:1788#L54">VanConnectorCreate</a>
+					<a class="permalink" href="index.html#VanClient.VanConnectorCreate">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cli *<a href="index.html#VanClient">VanClient</a>) VanConnectorCreate(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, secretFile <a href="http://localhost:6060/pkg/builtin/#string">string</a>, options <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#VanConnectorCreateOptions">VanConnectorCreateOptions</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="VanClient.VanConnectorInspect">func (*VanClient) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_connector_inspect.go?s=226:345#L3">VanConnectorInspect</a>
+					<a class="permalink" href="index.html#VanClient.VanConnectorInspect">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cli *<a href="index.html#VanClient">VanClient</a>) VanConnectorInspect(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (*<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#VanConnectorInspectResponse">VanConnectorInspectResponse</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+VanConnectorInspect VAN connector instance
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VanClient.VanConnectorList">func (*VanClient) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_connector_list.go?s=180:267#L2">VanConnectorList</a>
+					<a class="permalink" href="index.html#VanClient.VanConnectorList">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cli *<a href="index.html#VanClient">VanClient</a>) VanConnectorList(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>) ([]*<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Connector">Connector</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="VanClient.VanConnectorRemove">func (*VanClient) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_connector_remove.go?s=564:644#L19">VanConnectorRemove</a>
+					<a class="permalink" href="index.html#VanClient.VanConnectorRemove">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cli *<a href="index.html#VanClient">VanClient</a>) VanConnectorRemove(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="VanClient.VanConnectorTokenCreate">func (*VanClient) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_connector_token_create.go?s=3060:3167#L101">VanConnectorTokenCreate</a>
+					<a class="permalink" href="index.html#VanClient.VanConnectorTokenCreate">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cli *<a href="index.html#VanClient">VanClient</a>) VanConnectorTokenCreate(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, subject <a href="http://localhost:6060/pkg/builtin/#string">string</a>, secretFile <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="VanClient.VanRouterCreate">func (*VanClient) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_router_create.go?s=14344:14446#L433">VanRouterCreate</a>
+					<a class="permalink" href="index.html#VanClient.VanRouterCreate">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cli *<a href="index.html#VanClient">VanClient</a>) VanRouterCreate(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, options <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#VanRouterCreateOptions">VanRouterCreateOptions</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+VanRouterCreate instantiates a VAN (router and controller) deployment
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VanClient.VanRouterInspect">func (*VanClient) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_router_inspect.go?s=269:369#L5">VanRouterInspect</a>
+					<a class="permalink" href="index.html#VanClient.VanRouterInspect">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cli *<a href="index.html#VanClient">VanClient</a>) VanRouterInspect(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>) (*<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#VanRouterInspectResponse">VanRouterInspectResponse</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				<p>
+VanRouterInspect VAN deployment
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VanClient.VanRouterRemove">func (*VanClient) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_router_remove.go?s=247:311#L4">VanRouterRemove</a>
+					<a class="permalink" href="index.html#VanClient.VanRouterRemove">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cli *<a href="index.html#VanClient">VanClient</a>) VanRouterRemove(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+VanRouterRemove delete a VAN (router and controller) deployment
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VanClient.VanServiceInterfaceCreate">func (*VanClient) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_serviceinterface_create.go?s=455:615#L18">VanServiceInterfaceCreate</a>
+					<a class="permalink" href="index.html#VanClient.VanServiceInterfaceCreate">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cli *<a href="index.html#VanClient">VanClient</a>) VanServiceInterfaceCreate(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, targetType <a href="http://localhost:6060/pkg/builtin/#string">string</a>, targetName <a href="http://localhost:6060/pkg/builtin/#string">string</a>, options <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#VanServiceInterfaceCreateOptions">VanServiceInterfaceCreateOptions</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="VanClient.VanServiceInterfaceList">func (*VanClient) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_serviceinterface_list.go?s=165:266#L2">VanServiceInterfaceList</a>
+					<a class="permalink" href="index.html#VanClient.VanServiceInterfaceList">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cli *<a href="index.html#VanClient">VanClient</a>) VanServiceInterfaceList(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>) ([]*<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ServiceInterface">ServiceInterface</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="VanClient.VanServiceInterfaceRemove">func (*VanClient) <a href="http://localhost:6060/src/github.com/skupperproject/skupper/client/van_serviceinterface_remove.go?s=1993:2121#L53">VanServiceInterfaceRemove</a>
+					<a class="permalink" href="index.html#VanClient.VanServiceInterfaceRemove">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (cli *<a href="index.html#VanClient">VanClient</a>) VanServiceInterfaceRemove(ctx <a href="http://localhost:6060/pkg/context/">context</a>.<a href="http://localhost:6060/pkg/context/#Context">Context</a>, targetType <a href="http://localhost:6060/pkg/builtin/#string">string</a>, targetName <a href="http://localhost:6060/pkg/builtin/#string">string</a>, address <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.14.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="http://localhost:6060/doc/tos.html">Terms of Service</a> |
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

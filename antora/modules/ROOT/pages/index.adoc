@@ -1,0 +1,24 @@
+= Skupper
+
+[tabs]
+====
+//tab 1
+In discussions::
++
+--
+[plantuml, repos, svg,subs="attributes+"]
+....
+include::_partials/theory.uml[]
+....
+--
+//tab 2
+In practice::
++
+--
+[plantuml, overview, svg,subs="attributes+"]
+....
+include::_partials/practice.uml[]
+....
+--
+
+====

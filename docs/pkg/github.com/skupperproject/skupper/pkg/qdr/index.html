@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>qdr - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="http://localhost:6060/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="http://localhost:6060/lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.14";</script>
+<script src="http://localhost:6060/lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package qdr
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/skupperproject/skupper/pkg/qdr"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#AddConnector">func AddConnector(connector *types.Connector, qdrDep *appsv1.Deployment)</a></dd>
+			
+				
+				<dd><a href="index.html#GetConnectedSites">func GetConnectedSites(edge bool, namespace string, clientset kubernetes.Interface, config *restclient.Config) (types.TransportConnectedSites, error)</a></dd>
+			
+				
+				<dd><a href="index.html#GetEdgeSitesForRouter">func GetEdgeSitesForRouter(routerid string, namespace string, clientset kubernetes.Interface, config *restclient.Config) (int, error)</a></dd>
+			
+				
+				<dd><a href="index.html#GetTransportMode">func GetTransportMode(dep *appsv1.Deployment) types.TransportMode</a></dd>
+			
+				
+				<dd><a href="index.html#IsInterior">func IsInterior(qdr *appsv1.Deployment) bool</a></dd>
+			
+				
+				<dd><a href="index.html#ListRouterConnectors">func ListRouterConnectors(mode types.TransportMode, namespace string, cli kubernetes.Interface) []types.Connector</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Connection">type Connection</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GetConnections">func GetConnections(namespace string, clientset kubernetes.Interface, config *restclient.Config) ([]Connection, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GetInterRouterOrEdgeConnection">func GetInterRouterOrEdgeConnection(host string, connections []Connection) *Connection</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RouterNode">type RouterNode</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GetNodes">func GetNodes(namespace string, clientset kubernetes.Interface, config *restclient.Config) ([]RouterNode, error)</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/qdr/mgmt.go">mgmt.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/qdr/qdr.go">qdr.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+			
+			
+			<h2 id="AddConnector">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/qdr/qdr.go?s=306:378#L7">AddConnector</a>
+				<a class="permalink" href="index.html#AddConnector">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func AddConnector(connector *<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Connector">Connector</a>, qdrDep *<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/">appsv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/#Deployment">Deployment</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetConnectedSites">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/qdr/mgmt.go?s=1977:2126#L65">GetConnectedSites</a>
+				<a class="permalink" href="index.html#GetConnectedSites">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetConnectedSites(edge <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, clientset <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>, config *<a href="http://localhost:6060/pkg/k8s.io/client-go/rest/">restclient</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/rest/#Config">Config</a>) (<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#TransportConnectedSites">TransportConnectedSites</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetEdgeSitesForRouter">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/qdr/mgmt.go?s=3066:3199#L103">GetEdgeSitesForRouter</a>
+				<a class="permalink" href="index.html#GetEdgeSitesForRouter">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetEdgeSitesForRouter(routerid <a href="http://localhost:6060/pkg/builtin/#string">string</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, clientset <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>, config *<a href="http://localhost:6060/pkg/k8s.io/client-go/rest/">restclient</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/rest/#Config">Config</a>) (<a href="http://localhost:6060/pkg/builtin/#int">int</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetTransportMode">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/qdr/qdr.go?s=1201:1266#L27">GetTransportMode</a>
+				<a class="permalink" href="index.html#GetTransportMode">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetTransportMode(dep *<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/">appsv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/#Deployment">Deployment</a>) <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#TransportMode">TransportMode</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="IsInterior">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/qdr/qdr.go?s=866:910#L17">IsInterior</a>
+				<a class="permalink" href="index.html#IsInterior">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func IsInterior(qdr *<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/">appsv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/#Deployment">Deployment</a>) <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="ListRouterConnectors">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/qdr/qdr.go?s=1377:1490#L35">ListRouterConnectors</a>
+				<a class="permalink" href="index.html#ListRouterConnectors">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func ListRouterConnectors(mode <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#TransportMode">TransportMode</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) []<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Connector">Connector</a></pre>
+			
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Connection">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/qdr/mgmt.go?s=992:1228#L30">Connection</a>
+				<a class="permalink" href="index.html#Connection">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Connection struct {
+<span id="Connection.Container"></span>    Container  <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;container&#34;`
+<span id="Connection.OperStatus"></span>    OperStatus <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;operStatus&#34;`
+<span id="Connection.Host"></span>    Host       <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;host&#34;`
+<span id="Connection.Role"></span>    Role       <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;role&#34;`
+<span id="Connection.Active"></span>    Active     <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>   `json:&#34;active&#34;`
+<span id="Connection.Dir"></span>    Dir        <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;dir&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="GetConnections">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/qdr/mgmt.go?s=5061:5179#L179">GetConnections</a>
+					<a class="permalink" href="index.html#GetConnections">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func GetConnections(namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, clientset <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>, config *<a href="http://localhost:6060/pkg/k8s.io/client-go/rest/">restclient</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/rest/#Config">Config</a>) ([]<a href="index.html#Connection">Connection</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+			
+				
+				<h3 id="GetInterRouterOrEdgeConnection">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/qdr/mgmt.go?s=4473:4559#L156">GetInterRouterOrEdgeConnection</a>
+					<a class="permalink" href="index.html#GetInterRouterOrEdgeConnection">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func GetInterRouterOrEdgeConnection(host <a href="http://localhost:6060/pkg/builtin/#string">string</a>, connections []<a href="index.html#Connection">Connection</a>) *<a href="index.html#Connection">Connection</a></pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="RouterNode">type <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/qdr/mgmt.go?s=873:990#L24">RouterNode</a>
+				<a class="permalink" href="index.html#RouterNode">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type RouterNode struct {
+<span id="RouterNode.Id"></span>    Id      <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;id&#34;`
+<span id="RouterNode.Name"></span>    Name    <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;name&#34;`
+<span id="RouterNode.NextHop"></span>    NextHop <a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;nextHop&#34;`
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="GetNodes">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/qdr/mgmt.go?s=3778:3890#L135">GetNodes</a>
+					<a class="permalink" href="index.html#GetNodes">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func GetNodes(namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, clientset <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>, config *<a href="http://localhost:6060/pkg/k8s.io/client-go/rest/">restclient</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/rest/#Config">Config</a>) ([]<a href="index.html#RouterNode">RouterNode</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.14.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="http://localhost:6060/doc/tos.html">Terms of Service</a> |
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>

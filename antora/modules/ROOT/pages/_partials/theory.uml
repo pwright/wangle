@@ -1,0 +1,13 @@
+@startmindmap
+skinparam monochrome true 
+* Data plane
+** http
+** tcp
+** gRPC
+
+left
+
+** Control plane
+*** expose
+*** bind
+@endmindmap

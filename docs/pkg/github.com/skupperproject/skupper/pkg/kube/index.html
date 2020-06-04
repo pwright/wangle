@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>kube - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="http://localhost:6060/lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="http://localhost:6060/lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.14";</script>
+<script src="http://localhost:6060/lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package kube
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/skupperproject/skupper/pkg/kube"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#AppendConfigVolume">func AppendConfigVolume(volumes *[]corev1.Volume, mounts *[]corev1.VolumeMount, name string, path string)</a></dd>
+			
+				
+				<dd><a href="index.html#AppendSecretVolume">func AppendSecretVolume(volumes *[]corev1.Volume, mounts *[]corev1.VolumeMount, name string, path string)</a></dd>
+			
+				
+				<dd><a href="index.html#ContainerForController">func ContainerForController(ds types.DeploymentSpec) corev1.Container</a></dd>
+			
+				
+				<dd><a href="index.html#ContainerForTransport">func ContainerForTransport(ds types.DeploymentSpec) corev1.Container</a></dd>
+			
+				
+				<dd><a href="index.html#DeleteDeployment">func DeleteDeployment(name string, namespace string, cli kubernetes.Interface) error</a></dd>
+			
+				
+				<dd><a href="index.html#DeleteSecret">func DeleteSecret(name string, namespace string, cli kubernetes.Interface) error</a></dd>
+			
+				
+				<dd><a href="index.html#DeleteService">func DeleteService(name string, namespace string, kubeclient kubernetes.Interface) error</a></dd>
+			
+				
+				<dd><a href="index.html#FindEnvVar">func FindEnvVar(env []corev1.EnvVar, name string) *corev1.EnvVar</a></dd>
+			
+				
+				<dd><a href="index.html#FirstReadyPod">func FirstReadyPod(list []corev1.Pod) *corev1.Pod</a></dd>
+			
+				
+				<dd><a href="index.html#GetComponentVersion">func GetComponentVersion(namespace string, clientset kubernetes.Interface, component string) string</a></dd>
+			
+				
+				<dd><a href="index.html#GetConfigMap">func GetConfigMap(name string, namespace string, cli kubernetes.Interface) (*corev1.ConfigMap, error)</a></dd>
+			
+				
+				<dd><a href="index.html#GetDeployment">func GetDeployment(name string, namespace string, cli kubernetes.Interface) (*appsv1.Deployment, error)</a></dd>
+			
+				
+				<dd><a href="index.html#GetImageVersion">func GetImageVersion(pod *corev1.Pod, container string) string</a></dd>
+			
+				
+				<dd><a href="index.html#GetLoadBalancerHostOrIP">func GetLoadBalancerHostOrIP(service *corev1.Service) string</a></dd>
+			
+				
+				<dd><a href="index.html#GetOwnerReference">func GetOwnerReference(dep *appsv1.Deployment) metav1.OwnerReference</a></dd>
+			
+				
+				<dd><a href="index.html#GetReadyPod">func GetReadyPod(namespace string, clientset kubernetes.Interface, component string) (*corev1.Pod, error)</a></dd>
+			
+				
+				<dd><a href="index.html#GetRoute">func GetRoute(name string, namespace string, rc *routev1client.RouteV1Client) (*routev1.Route, error)</a></dd>
+			
+				
+				<dd><a href="index.html#GetService">func GetService(name string, namespace string, kubeclient kubernetes.Interface) (*corev1.Service, error)</a></dd>
+			
+				
+				<dd><a href="index.html#IsPodReady">func IsPodReady(pod *corev1.Pod) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsPodRunning">func IsPodRunning(pod *corev1.Pod) bool</a></dd>
+			
+				
+				<dd><a href="index.html#NewCertAuthorityWithOwner">func NewCertAuthorityWithOwner(ca types.CertAuthority, owner metav1.OwnerReference, namespace string, cli kubernetes.Interface) (*corev1.Secret, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewConfigMapWithOwner">func NewConfigMapWithOwner(name string, owner metav1.OwnerReference, namespace string, kubeclient kubernetes.Interface) (*corev1.ConfigMap, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewControllerDeployment">func NewControllerDeployment(van *types.VanRouterSpec, ownerRef metav1.OwnerReference, cli kubernetes.Interface) (*appsv1.Deployment, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewProxyDeployment">func NewProxyDeployment(serviceInterface types.ServiceInterface, namespace string, cli kubernetes.Interface) (*appsv1.Deployment, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewProxyStatefulSet">func NewProxyStatefulSet(serviceInterface types.ServiceInterface, namespace string, cli kubernetes.Interface) (*appsv1.StatefulSet, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewRoleBindingWithOwner">func NewRoleBindingWithOwner(rb types.RoleBinding, owner metav1.OwnerReference, namespace string, kubeclient kubernetes.Interface) (*rbacv1.RoleBinding, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewRoleWithOwner">func NewRoleWithOwner(newrole types.Role, owner metav1.OwnerReference, namespace string, kubeclient kubernetes.Interface) (*rbacv1.Role, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewRouteWithOwner">func NewRouteWithOwner(rte types.Route, owner metav1.OwnerReference, namespace string, rc *routev1client.RouteV1Client) (*routev1.Route, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewSecretWithOwner">func NewSecretWithOwner(cred types.Credential, owner metav1.OwnerReference, namespace string, cli kubernetes.Interface) (*corev1.Secret, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewServiceAccountWithOwner">func NewServiceAccountWithOwner(sa types.ServiceAccount, owner metav1.OwnerReference, namespace string, cli kubernetes.Interface) (*corev1.ServiceAccount, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewServiceForProxy">func NewServiceForProxy(desiredService types.ServiceInterface, namespace string, kubeclient kubernetes.Interface) (*corev1.Service, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewServiceWithOwner">func NewServiceWithOwner(svc types.Service, owner metav1.OwnerReference, namespace string, kubeclient kubernetes.Interface) (*corev1.Service, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewTransportDeployment">func NewTransportDeployment(van *types.VanRouterSpec, cli kubernetes.Interface) (*appsv1.Deployment, error)</a></dd>
+			
+				
+				<dd><a href="index.html#RemoveSecretVolumeForDeployment">func RemoveSecretVolumeForDeployment(name string, dep *appsv1.Deployment, index int)</a></dd>
+			
+				
+				<dd><a href="index.html#SetEnvVarForDeployment">func SetEnvVarForDeployment(dep *appsv1.Deployment, name string, value string)</a></dd>
+			
+				
+				<dd><a href="index.html#UpdateConfigMapForHeadlessServiceInterface">func UpdateConfigMapForHeadlessServiceInterface(serviceName string, headless types.Headless, port int, options types.VanServiceInterfaceCreateOptions, owner *metav1.OwnerReference, namespace string, cli kubernetes.Interface) error</a></dd>
+			
+				
+				<dd><a href="index.html#UpdateConfigMapForServiceInterface">func UpdateConfigMapForServiceInterface(serviceName string, targetName string, selector string, port int, options types.VanServiceInterfaceCreateOptions, owner *metav1.OwnerReference, namespace string, cli kubernetes.Interface) error</a></dd>
+			
+				
+				<dd><a href="index.html#UpdateSkupperServices">func UpdateSkupperServices(changed []types.ServiceInterface, deleted []string, origin string, namespace string, cli kubernetes.Interface) error</a></dd>
+			
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/configmaps.go">configmaps.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/containers.go">containers.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/deployments.go">deployments.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/envvars.go">envvars.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/pods.go">pods.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/rolebindings.go">rolebindings.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/roles.go">roles.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/routes.go">routes.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/secrets.go">secrets.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/serviceaccounts.go">serviceaccounts.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/services.go">services.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/volumes.go">volumes.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+			
+			
+			<h2 id="AppendConfigVolume">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/volumes.go?s=615:720#L12">AppendConfigVolume</a>
+				<a class="permalink" href="index.html#AppendConfigVolume">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func AppendConfigVolume(volumes *[]<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Volume">Volume</a>, mounts *[]<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#VolumeMount">VolumeMount</a>, name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, path <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="AppendSecretVolume">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/volumes.go?s=1049:1154#L29">AppendSecretVolume</a>
+				<a class="permalink" href="index.html#AppendSecretVolume">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func AppendSecretVolume(volumes *[]<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Volume">Volume</a>, mounts *[]<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#VolumeMount">VolumeMount</a>, name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, path <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="ContainerForController">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/containers.go?s=183:252#L1">ContainerForController</a>
+				<a class="permalink" href="index.html#ContainerForController">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func ContainerForController(ds <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#DeploymentSpec">DeploymentSpec</a>) <a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Container">Container</a></pre>
+			<p>
+TODO - remove constants, get from spec
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ContainerForTransport">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/containers.go?s=390:458#L9">ContainerForTransport</a>
+				<a class="permalink" href="index.html#ContainerForTransport">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func ContainerForTransport(ds <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#DeploymentSpec">DeploymentSpec</a>) <a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Container">Container</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteDeployment">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/deployments.go?s=522:606#L16">DeleteDeployment</a>
+				<a class="permalink" href="index.html#DeleteDeployment">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func DeleteDeployment(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteSecret">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/secrets.go?s=1922:2002#L50">DeleteSecret</a>
+				<a class="permalink" href="index.html#DeleteSecret">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func DeleteSecret(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteService">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/services.go?s=1077:1165#L36">DeleteService</a>
+				<a class="permalink" href="index.html#DeleteService">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func DeleteService(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, kubeclient <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="FindEnvVar">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/envvars.go?s=84:148#L1">FindEnvVar</a>
+				<a class="permalink" href="index.html#FindEnvVar">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func FindEnvVar(env []<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#EnvVar">EnvVar</a>, name <a href="http://localhost:6060/pkg/builtin/#string">string</a>) *<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#EnvVar">EnvVar</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="FirstReadyPod">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/pods.go?s=967:1016#L30">FirstReadyPod</a>
+				<a class="permalink" href="index.html#FirstReadyPod">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func FirstReadyPod(list []<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Pod">Pod</a>) *<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Pod">Pod</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetComponentVersion">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/pods.go?s=1964:2063#L69">GetComponentVersion</a>
+				<a class="permalink" href="index.html#GetComponentVersion">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetComponentVersion(namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, clientset <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>, component <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetConfigMap">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/configmaps.go?s=1025:1126#L32">GetConfigMap</a>
+				<a class="permalink" href="index.html#GetConfigMap">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetConfigMap(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#ConfigMap">ConfigMap</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetDeployment">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/deployments.go?s=866:969#L25">GetDeployment</a>
+				<a class="permalink" href="index.html#GetDeployment">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetDeployment(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/">appsv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/#Deployment">Deployment</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>
+TODO, pass full client object with namespace and clientset
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetImageVersion">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/pods.go?s=1591:1653#L55">GetImageVersion</a>
+				<a class="permalink" href="index.html#GetImageVersion">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetImageVersion(pod *<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Pod">Pod</a>, container <a href="http://localhost:6060/pkg/builtin/#string">string</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetLoadBalancerHostOrIP">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/services.go?s=851:911#L25">GetLoadBalancerHostOrIP</a>
+				<a class="permalink" href="index.html#GetLoadBalancerHostOrIP">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetLoadBalancerHostOrIP(service *<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Service">Service</a>) <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetOwnerReference">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/deployments.go?s=292:360#L7">GetOwnerReference</a>
+				<a class="permalink" href="index.html#GetOwnerReference">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetOwnerReference(dep *<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/">appsv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/#Deployment">Deployment</a>) <a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/">metav1</a>.<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/#OwnerReference">OwnerReference</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetReadyPod">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/pods.go?s=1102:1207#L39">GetReadyPod</a>
+				<a class="permalink" href="index.html#GetReadyPod">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetReadyPod(namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, clientset <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>, component <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Pod">Pod</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetRoute">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/routes.go?s=340:441#L5">GetRoute</a>
+				<a class="permalink" href="index.html#GetRoute">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetRoute(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, rc *<a href="http://localhost:6060/pkg/github.com/openshift/client-go/route/clientset/versioned/typed/route/v1/">routev1client</a>.<a href="http://localhost:6060/pkg/github.com/openshift/client-go/route/clientset/versioned/typed/route/v1/#RouteV1Client">RouteV1Client</a>) (*<a href="http://localhost:6060/pkg/github.com/openshift/api/route/v1/">routev1</a>.<a href="http://localhost:6060/pkg/github.com/openshift/api/route/v1/#Route">Route</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="GetService">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/services.go?s=1371:1475#L44">GetService</a>
+				<a class="permalink" href="index.html#GetService">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func GetService(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, kubeclient <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Service">Service</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="IsPodReady">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/pods.go?s=693:730#L17">IsPodReady</a>
+				<a class="permalink" href="index.html#IsPodReady">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func IsPodReady(pod *<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Pod">Pod</a>) <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="IsPodRunning">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/pods.go?s=876:915#L26">IsPodRunning</a>
+				<a class="permalink" href="index.html#IsPodRunning">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func IsPodRunning(pod *<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Pod">Pod</a>) <a href="http://localhost:6060/pkg/builtin/#bool">bool</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewCertAuthorityWithOwner">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/secrets.go?s=329:480#L6">NewCertAuthorityWithOwner</a>
+				<a class="permalink" href="index.html#NewCertAuthorityWithOwner">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewCertAuthorityWithOwner(ca <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#CertAuthority">CertAuthority</a>, owner <a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/">metav1</a>.<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/#OwnerReference">OwnerReference</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Secret">Secret</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewConfigMapWithOwner">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/configmaps.go?s=257:403#L5">NewConfigMapWithOwner</a>
+				<a class="permalink" href="index.html#NewConfigMapWithOwner">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewConfigMapWithOwner(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, owner <a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/">metav1</a>.<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/#OwnerReference">OwnerReference</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, kubeclient <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#ConfigMap">ConfigMap</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewControllerDeployment">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/deployments.go?s=6449:6589#L251">NewControllerDeployment</a>
+				<a class="permalink" href="index.html#NewControllerDeployment">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewControllerDeployment(van *<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#VanRouterSpec">VanRouterSpec</a>, ownerRef <a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/">metav1</a>.<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/#OwnerReference">OwnerReference</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/">appsv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/#Deployment">Deployment</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewProxyDeployment">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/deployments.go?s=3903:4039#L145">NewProxyDeployment</a>
+				<a class="permalink" href="index.html#NewProxyDeployment">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewProxyDeployment(serviceInterface <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#ServiceInterface">ServiceInterface</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/">appsv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/#Deployment">Deployment</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewProxyStatefulSet">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/deployments.go?s=1131:1269#L34">NewProxyStatefulSet</a>
+				<a class="permalink" href="index.html#NewProxyStatefulSet">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewProxyStatefulSet(serviceInterface <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#ServiceInterface">ServiceInterface</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/">appsv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/#StatefulSet">StatefulSet</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewRoleBindingWithOwner">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/rolebindings.go?s=259:418#L6">NewRoleBindingWithOwner</a>
+				<a class="permalink" href="index.html#NewRoleBindingWithOwner">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewRoleBindingWithOwner(rb <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#RoleBinding">RoleBinding</a>, owner <a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/">metav1</a>.<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/#OwnerReference">OwnerReference</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, kubeclient <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/rbac/v1/">rbacv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/rbac/v1/#RoleBinding">RoleBinding</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewRoleWithOwner">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/roles.go?s=228:371#L5">NewRoleWithOwner</a>
+				<a class="permalink" href="index.html#NewRoleWithOwner">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewRoleWithOwner(newrole <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Role">Role</a>, owner <a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/">metav1</a>.<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/#OwnerReference">OwnerReference</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, kubeclient <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/rbac/v1/">rbacv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/rbac/v1/#Role">Role</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewRouteWithOwner">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/routes.go?s=537:680#L10">NewRouteWithOwner</a>
+				<a class="permalink" href="index.html#NewRouteWithOwner">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewRouteWithOwner(rte <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Route">Route</a>, owner <a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/">metav1</a>.<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/#OwnerReference">OwnerReference</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, rc *<a href="http://localhost:6060/pkg/github.com/openshift/client-go/route/clientset/versioned/typed/route/v1/">routev1client</a>.<a href="http://localhost:6060/pkg/github.com/openshift/client-go/route/clientset/versioned/typed/route/v1/#RouteV1Client">RouteV1Client</a>) (*<a href="http://localhost:6060/pkg/github.com/openshift/api/route/v1/">routev1</a>.<a href="http://localhost:6060/pkg/github.com/openshift/api/route/v1/#Route">Route</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewSecretWithOwner">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/secrets.go?s=1034:1177#L25">NewSecretWithOwner</a>
+				<a class="permalink" href="index.html#NewSecretWithOwner">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewSecretWithOwner(cred <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Credential">Credential</a>, owner <a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/">metav1</a>.<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/#OwnerReference">OwnerReference</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Secret">Secret</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewServiceAccountWithOwner">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/serviceaccounts.go?s=258:419#L5">NewServiceAccountWithOwner</a>
+				<a class="permalink" href="index.html#NewServiceAccountWithOwner">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewServiceAccountWithOwner(sa <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#ServiceAccount">ServiceAccount</a>, owner <a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/">metav1</a>.<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/#OwnerReference">OwnerReference</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#ServiceAccount">ServiceAccount</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewServiceForProxy">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/services.go?s=1590:1728#L49">NewServiceForProxy</a>
+				<a class="permalink" href="index.html#NewServiceForProxy">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewServiceForProxy(desiredService <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#ServiceInterface">ServiceInterface</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, kubeclient <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Service">Service</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewServiceWithOwner">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/services.go?s=3113:3261#L100">NewServiceWithOwner</a>
+				<a class="permalink" href="index.html#NewServiceWithOwner">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewServiceWithOwner(svc <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Service">Service</a>, owner <a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/">metav1</a>.<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/#OwnerReference">OwnerReference</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, kubeclient <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/">corev1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/core/v1/#Service">Service</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="NewTransportDeployment">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/deployments.go?s=8033:8140#L300">NewTransportDeployment</a>
+				<a class="permalink" href="index.html#NewTransportDeployment">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func NewTransportDeployment(van *<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#VanRouterSpec">VanRouterSpec</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) (*<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/">appsv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/#Deployment">Deployment</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="RemoveSecretVolumeForDeployment">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/volumes.go?s=1420:1504#L44">RemoveSecretVolumeForDeployment</a>
+				<a class="permalink" href="index.html#RemoveSecretVolumeForDeployment">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func RemoveSecretVolumeForDeployment(name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, dep *<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/">appsv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/#Deployment">Deployment</a>, index <a href="http://localhost:6060/pkg/builtin/#int">int</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="SetEnvVarForDeployment">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/envvars.go?s=233:311#L7">SetEnvVarForDeployment</a>
+				<a class="permalink" href="index.html#SetEnvVarForDeployment">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func SetEnvVarForDeployment(dep *<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/">appsv1</a>.<a href="http://localhost:6060/pkg/k8s.io/api/apps/v1/#Deployment">Deployment</a>, name <a href="http://localhost:6060/pkg/builtin/#string">string</a>, value <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="UpdateConfigMapForHeadlessServiceInterface">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/configmaps.go?s=2115:2345#L67">UpdateConfigMapForHeadlessServiceInterface</a>
+				<a class="permalink" href="index.html#UpdateConfigMapForHeadlessServiceInterface">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func UpdateConfigMapForHeadlessServiceInterface(serviceName <a href="http://localhost:6060/pkg/builtin/#string">string</a>, headless <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Headless">Headless</a>, port <a href="http://localhost:6060/pkg/builtin/#int">int</a>, options <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#VanServiceInterfaceCreateOptions">VanServiceInterfaceCreateOptions</a>, owner *<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/">metav1</a>.<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/#OwnerReference">OwnerReference</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="UpdateConfigMapForServiceInterface">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/configmaps.go?s=4060:4293#L120">UpdateConfigMapForServiceInterface</a>
+				<a class="permalink" href="index.html#UpdateConfigMapForServiceInterface">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func UpdateConfigMapForServiceInterface(serviceName <a href="http://localhost:6060/pkg/builtin/#string">string</a>, targetName <a href="http://localhost:6060/pkg/builtin/#string">string</a>, selector <a href="http://localhost:6060/pkg/builtin/#string">string</a>, port <a href="http://localhost:6060/pkg/builtin/#int">int</a>, options <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#VanServiceInterfaceCreateOptions">VanServiceInterfaceCreateOptions</a>, owner *<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/">metav1</a>.<a href="http://localhost:6060/pkg/k8s.io/apimachinery/pkg/apis/meta/v1/#OwnerReference">OwnerReference</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="UpdateSkupperServices">func <a href="http://localhost:6060/src/github.com/skupperproject/skupper/pkg/kube/configmaps.go?s=1285:1428#L41">UpdateSkupperServices</a>
+				<a class="permalink" href="index.html#UpdateSkupperServices">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func UpdateSkupperServices(changed []<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#ServiceInterface">ServiceInterface</a>, deleted []<a href="http://localhost:6060/pkg/builtin/#string">string</a>, origin <a href="http://localhost:6060/pkg/builtin/#string">string</a>, namespace <a href="http://localhost:6060/pkg/builtin/#string">string</a>, cli <a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/">kubernetes</a>.<a href="http://localhost:6060/pkg/k8s.io/client-go/kubernetes/#Interface">Interface</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+			
+			
+			
+
+		
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.14.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="http://localhost:6060/doc/tos.html">Terms of Service</a> |
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>
