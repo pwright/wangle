@@ -1,0 +1,16 @@
+skupper bind --help
+skupper check-connection --help
+skupper connect --help
+skupper connection-token --help
+skupper delete --help
+skupper disconnect --help
+skupper expose --help
+skupper help --help
+skupper init --help
+skupper list-connectors --help
+skupper list-exposed --help
+skupper service --help
+skupper status --help
+skupper unbind --help
+skupper unexpose --help
+skupper version --help

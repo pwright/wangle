@@ -1,3 +1,5 @@
 * xref:index.adoc[ Home]
 
 * link:/wangle/pkg/github.com/skupperproject/skupper/index.html[Go Doc]
+
+* link:/wangle/help.txt[CLI Reference]

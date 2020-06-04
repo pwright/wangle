@@ -1,0 +1,251 @@
+Usage:
+  skupper [command]
+
+Available Commands:
+  bind             Bind a target to a service
+  check-connection Check whether a connection to another Skupper site is active
+  connect          Connect the current Skupper site to a remote Skupper site
+  connection-token Create a connection token.  The 'connect' command uses the token to establish a connection from a remote Skupper site.
+  delete           Delete skupper installation
+  disconnect       Remove the specified connection
+  expose           Expose a set of pods through a Skupper address
+  help             Help about any command
+  init             Initialise a Skupper site
+  list-connectors  List configured outgoing connections
+  list-exposed     List services exposed over the Skupper network
+  service          Manage skupper service definitions
+  status           Report the status of the current Skupper site
+  unbind           Unbind a target from a service
+  unexpose         Unexpose a set of pods previously exposed through a Skupper address
+  version          Report the version of the Skupper CLI and services
+
+Flags:
+  -c, --context string      The kubeconfig context to use
+  -h, --help                help for skupper
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+
+Use "skupper [command] --help" for more information about a command.
+
+Bind a target to a service
+
+Usage:
+  skupper bind <service-name> <target-type> <target-name> [flags]
+
+Flags:
+  -h, --help              help for bind
+      --protocol string   The protocol to proxy (tcp, http or http2. (default "tcp")
+      --target-port int   The port the target is listening on.
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+Check whether a connection to another Skupper site is active
+
+Usage:
+  skupper check-connection all|<connection-name> [flags]
+
+Flags:
+  -h, --help       help for check-connection
+      --wait int   The number of seconds to wait for connections to become active
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+Connect the current Skupper site to a remote Skupper site
+
+Usage:
+  skupper connect <connection-token-file> [flags]
+
+Flags:
+      --connection-name string   Provide a specific name for the connection. The name is used when removing a connection with disconnect.
+      --cost int                 Specify a cost for this connection. (default 1)
+  -h, --help                     help for connect
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+Create a connection token.  The 'connect' command uses the token to establish a connection from a remote Skupper site.
+
+Usage:
+  skupper connection-token <output-file> [flags]
+
+Flags:
+  -i, --client-identity string   Provide a specific identity as which connecting skupper installation will be authenticated (default "skupper")
+  -h, --help                     help for connection-token
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+delete will delete any skupper related objects from the namespace
+
+Usage:
+  skupper delete [flags]
+
+Flags:
+  -h, --help   help for delete
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+Remove the specified connection
+
+Usage:
+  skupper disconnect <name> [flags]
+
+Flags:
+  -h, --help   help for disconnect
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+Expose a set of pods through a Skupper address
+
+Usage:
+  skupper expose [deployment <name>|pods <selector>|statefulset <statefulsetname>] [flags]
+
+Flags:
+      --address string     The Skupper address to expose
+      --aggregate string   Aggregation strategy (one of 'json' or 'multipart').
+      --headless           Expose through a headless service (valid only for a statefulset target)
+  -h, --help               help for expose
+      --port int           The port to expose on
+      --protocol string    The protocol to proxy (tcp, http or http2) (default "tcp")
+      --target-port int    The port to target on pods
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+Help provides help for any command in the application.
+Simply type skupper help [path to command] for full details.
+
+Usage:
+  skupper help [command] [flags]
+
+Flags:
+  -h, --help   help for help
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+init sets up a router and other supporting objects to provide a functional Skupper installation that can then be connected to other Skupper sites
+
+Usage:
+  skupper init [flags]
+
+Flags:
+      --cluster-local             Set up skupper to only accept connections from within the local cluster.
+      --console-auth string       Authentication mode for console(s). One of: 'openshift', 'internal', 'unsecured'
+      --console-password string   Router console user. Valid only when --router-console-auth=internal
+      --console-user string       Router console user. Valid only when --router-console-auth=internal
+      --edge                      Configure as an edge
+      --enable-console            Enable skupper console (default true)
+      --enable-proxy-controller   Setup the proxy controller as well as the router (default true)
+      --enable-router-console     Enable router console
+      --enable-service-sync       Configure proxy controller to particiapte in service sync (not relevant if --enable-proxy-controller is false) (default true)
+  -h, --help                      help for init
+      --site-name string          Provide a specific name for this skupper installation
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+List configured outgoing connections
+
+Usage:
+  skupper list-connectors [flags]
+
+Flags:
+  -h, --help   help for list-connectors
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+List services exposed over the Skupper network
+
+Usage:
+  skupper list-exposed [flags]
+
+Flags:
+  -h, --help   help for list-exposed
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+Manage skupper service definitions
+
+Usage:
+  skupper service [command]
+
+Available Commands:
+  create      Create a skupper service
+  delete      Delete a skupper service
+
+Flags:
+  -h, --help   help for service
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+
+Use "skupper service [command] --help" for more information about a command.
+Report the status of the current Skupper site
+
+Usage:
+  skupper status [flags]
+
+Flags:
+  -h, --help   help for status
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+Unbind a target from a service
+
+Usage:
+  skupper unbind <service-name> <target-type> <target-name> [flags]
+
+Flags:
+  -h, --help   help for unbind
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+Unexpose a set of pods previously exposed through a Skupper address
+
+Usage:
+  skupper unexpose [deployment <name>|pods <selector>|statefulset <statefulsetname>] [flags]
+
+Flags:
+      --address string   Skupper address the target was exposed as
+  -h, --help             help for unexpose
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
+Report the version of the Skupper CLI and services
+
+Usage:
+  skupper version [flags]
+
+Flags:
+  -h, --help   help for version
+
+Global Flags:
+  -c, --context string      The kubeconfig context to use
+      --kubeconfig string   Path to the kubeconfig file to use
+  -n, --namespace string    The Kubernetes namespace to use
