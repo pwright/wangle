@@ -1,0 +1,17 @@
+= Outline
+
+:network-name: Skupper network
+
+* Introduction to Virtual Application Networks (VANs)
+* Creating a {network-name}
+** Running the 'skupper' command line utility
+* Exposing a service on a {network-name}
+* Binding services on a {network-name}
+
+* Monitoring a Skupper network
+** Monitoring services
+** Monitoring sites
+** Monitoring deployments
+** Monitoring processes
+
+

@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://pwright.github.io/wangle/skupper/glossary.html</loc>
+<lastmod>2020-06-09T13:20:59.898Z</lastmod>
+</url>
+<url>
 <loc>https://pwright.github.io/wangle/skupper/index.html</loc>
-<lastmod>2020-06-04T15:27:01.768Z</lastmod>
+<lastmod>2020-06-09T13:20:59.898Z</lastmod>
+</url>
+<url>
+<loc>https://pwright.github.io/wangle/skupper/notes.html</loc>
+<lastmod>2020-06-09T13:20:59.898Z</lastmod>
+</url>
+<url>
+<loc>https://pwright.github.io/wangle/skupper/outline.html</loc>
+<lastmod>2020-06-09T13:20:59.898Z</lastmod>
 </url>
 </urlset>

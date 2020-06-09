@@ -1,0 +1,18 @@
+= Skupper Docs
+
+
+For godoc:
+
+----
+
+godoc -http=:6060
+
+wget -m -k -q -erobots=off --no-host-directories --no-use-server-timestamps --no-parent http://localhost:6060/pkg/github.com/skupperproject/skupper/
+----
+
+For cli:
+
+----
+skupper help > help.txt
+sh ./skupper.sh >> help.txt
+----

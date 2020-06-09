@@ -1,0 +1,19 @@
+= Skupper Glossary
+
+[glossary]
+Virtual Application Network (VAN)::
+    is an application-layer network that enables communications while avoiding the restrictions of the TCP/IP protocols. 
++
+Existing applications can run on a VAN without modification.
+
+Skupper router::
+    is software that runs on in a LAN, on a single host, or in a Kubernetes namespace and enables communications over a VAN.
+
+VAN site::
+    is defined by a running Skupper router.
+
+VAN address::
+    is a 
+
+stateful target::
+    

@@ -1,5 +1,9 @@
 * xref:index.adoc[ Home]
 
+** xref:notes.adoc[Notes]
+** xref:glossary.adoc[Glossary]
+** xref:outline.adoc[Outline]
+
 * link:/wangle/pkg/github.com/skupperproject/skupper/index.html[Go Doc]
 
 * link:/wangle/help.txt[CLI Reference]
