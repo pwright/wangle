@@ -1,19 +1,72 @@
 = Skupper Glossary
 
+
+// tag::attributes[]
+:VirtualApplicationNetwork: pass:quotes[*Virtual Application Network*]
+:VanSite: pass:quotes[*Site*]
+:VanConnection: pass:quotes[*Connection*]
+:VanRouter: pass:quotes[*Router*]
+:VanAddress: pass:quotes[*Address*]
+:VanBinding: pass:quotes[*Binding*]
+:VanService: pass:quotes[*Service*]
+:ServiceDeployment: pass:quotes[*Deployment*]
+:ServiceProcess: pass:quotes[*Process*]
+:ApplicationChannel: pass:quotes[*Channel*]
+:DistributedApplication: pass:quotes[*Application*]
+:ClusterWare: pass:quotes[*Kubernetes*]
+// end::attributes[]
+
 [glossary]
-Virtual Application Network (VAN)::
+{VirtualApplicationNetwork} (VAN)::
     is an application-layer network that enables communications while avoiding the restrictions of the TCP/IP protocols. 
 +
 Existing applications can run on a VAN without modification.
+The VAN is a directed graph, although communication is bidirectional.
 
-Skupper router::
-    is software that runs on in a LAN, on a single host, or in a Kubernetes namespace and enables communications over a VAN.
+ 
+{VanSite}::
+    is a named context for running {ServiceDeployment}s
++
+In {ClusterWare}, the {VanSite} name defaults to the namespace name.
+ 
+{VanConnection}::
+    is a channel for communication between two {VanSite}s.  It is the basis for communication.
++
+A {VanConnection} is established using a ConnectionToken.
+ 
+VanRouter::
+    is the software that runs on each {VanSite} that enables connections.
+ 
+{VanAddress}::
+    defines the entities that can send and receive messages, typically corresponds to a {VanSite}.
+ 
+{VanBinding}::
+    binds a {ServiceDeployment} or a set of ServiceProcesses to a {VanAddress}
+ 
+{VanService}::
+    is user-defined functionality exposed as a network-accessible interface.
++
+In {ClusterWare}, the {VanService} name defaults to the deployment name and is associated with {ServiceDeployment}s.
+{VanService}s can be combined, for example, a product-browse service can be combined with a product-order service.
++
+* Corresponds to one Kube service *name*, but *not* one Kube *service*.
+* Corresponds to one or more Kube services, but only *one* Kube service *name*.
 
-VAN site::
-    is defined by a running Skupper router.
+ 
+{ServiceDeployment}::
+    is a configuration of the entities that implement a {VanService} in a {VanSite}.
++
+In {ClusterWare}, the {ServiceDeployment} name defaults to the deployment name and is associated with {ServiceProcess}es.
 
-VAN address::
-    is a 
+ 
+ServiceProcess::
+    is a piece of running code that implements the network-accessible interface of its {VanService}.
++
+In {ClusterWare}, a {ServiceProcess} corresponds to a pod.
+ 
+{ApplicationChannel}::
+    is a asymmetric, bidirectional) relationship between two {ServiceProcess}es, typically referred to as a client-server relationship.
++
+The {ApplicationChannel} endpoints are two {ServiceProcess}es with the {ApplicationChannel} forming the links in the VAN topology for an application.
 
-stateful target::
-    
+

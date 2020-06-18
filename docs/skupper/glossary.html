@@ -107,26 +107,79 @@
 <h1 class="page">Skupper Glossary</h1>
 <div class="dlist glossary">
 <dl>
-<dt>Virtual Application Network (VAN)</dt>
+<dt><strong>Virtual Application Network</strong> (VAN)</dt>
 <dd>
 <p>is an application-layer network that enables communications while avoiding the restrictions of the TCP/IP protocols.</p>
 <div class="paragraph">
-<p>Existing applications can run on a VAN without modification.</p>
+<p>Existing applications can run on a VAN without modification.
+The VAN is a directed graph, although communication is bidirectional.</p>
 </div>
 </dd>
-<dt>Skupper router</dt>
+<dt><strong>Site</strong></dt>
 <dd>
-<p>is software that runs on in a LAN, on a single host, or in a Kubernetes namespace and enables communications over a VAN.</p>
+<p>is a named context for running <strong>Deployment</strong>s</p>
+<div class="paragraph">
+<p>In <strong>Kubernetes</strong>, the <strong>Site</strong> name defaults to the namespace name.</p>
+</div>
 </dd>
-<dt>VAN site</dt>
+<dt><strong>Connection</strong></dt>
 <dd>
-<p>is defined by a running Skupper router.</p>
+<p>is a channel for communication between two <strong>Site</strong>s.  It is the basis for communication.</p>
+<div class="paragraph">
+<p>A <strong>Connection</strong> is established using a ConnectionToken.</p>
+</div>
 </dd>
-<dt>VAN address</dt>
+<dt>VanRouter</dt>
 <dd>
-<p>is a</p>
+<p>is the software that runs on each <strong>Site</strong> that enables connections.</p>
 </dd>
-<dt>stateful target</dt>
+<dt><strong>Address</strong></dt>
+<dd>
+<p>defines the entities that can send and receive messages, typically corresponds to a <strong>Site</strong>.</p>
+</dd>
+<dt><strong>Binding</strong></dt>
+<dd>
+<p>binds a <strong>Deployment</strong> or a set of ServiceProcesses to a <strong>Address</strong></p>
+</dd>
+<dt><strong>Service</strong></dt>
+<dd>
+<p>is user-defined functionality exposed as a network-accessible interface.</p>
+<div class="paragraph">
+<p>In <strong>Kubernetes</strong>, the <strong>Service</strong> name defaults to the deployment name and is associated with <strong>Deployment</strong>s.
+<strong>Service</strong>s can be combined, for example, a product-browse service can be combined with a product-order service.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Corresponds to one Kube service <strong>name</strong>, but <strong>not</strong> one Kube <strong>service</strong>.</p>
+</li>
+<li>
+<p>Corresponds to one or more Kube services, but only <strong>one</strong> Kube service <strong>name</strong>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt><strong>Deployment</strong></dt>
+<dd>
+<p>is a configuration of the entities that implement a <strong>Service</strong> in a <strong>Site</strong>.</p>
+<div class="paragraph">
+<p>In <strong>Kubernetes</strong>, the <strong>Deployment</strong> name defaults to the deployment name and is associated with <strong>Process</strong>es.</p>
+</div>
+</dd>
+<dt>ServiceProcess</dt>
+<dd>
+<p>is a piece of running code that implements the network-accessible interface of its <strong>Service</strong>.</p>
+<div class="paragraph">
+<p>In <strong>Kubernetes</strong>, a <strong>Process</strong> corresponds to a pod.</p>
+</div>
+</dd>
+<dt><strong>Channel</strong></dt>
+<dd>
+<p>is a asymmetric, bidirectional) relationship between two <strong>Process</strong>es, typically referred to as a client-server relationship.</p>
+<div class="paragraph">
+<p>The <strong>Channel</strong> endpoints are two <strong>Process</strong>es with the <strong>Channel</strong> forming the links in the VAN topology for an application.</p>
+</div>
+</dd>
 </dl>
 </div>
 </article>

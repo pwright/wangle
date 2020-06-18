@@ -1,0 +1,33 @@
+@startmindmap
+skinparam monochrome true
+
+* messaging
+** destination
+*** Pub sub
+**** topics
+*** P2P
+**** queues
+** frames
+*** open (the connection)
+*** begin (the session)
+*** attach (the link)
+*** transfer
+*** flow
+*** disposition
+*** detach (the link)
+*** end (the session)
+*** close (the connection)
+
+left
+
+** AMQP
+*** is a wire-level protocol (qpid)
+*** is an application layer protocol (wikipedia)
+
+** client
+*** wire protocol
+**** broker
+** producer
+*** consumer
+@endmindmap
+
