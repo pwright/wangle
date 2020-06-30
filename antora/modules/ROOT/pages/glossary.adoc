@@ -38,7 +38,7 @@ VanRouter::
     is the software that runs on each {VanSite} that enables connections.
  
 {VanAddress}::
-    defines the entities that can send and receive messages, typically corresponds to a {VanSite}.
+    Addresses are created by service bindings to provide targets for messages.
  
 {VanBinding}::
     binds a {ServiceDeployment} or a set of ServiceProcesses to a {VanAddress}
